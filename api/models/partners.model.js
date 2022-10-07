@@ -9,6 +9,13 @@ const partnerSchema = new Schema(
       maxLength: [40, "The name of the show must be less than 40 characters"],
     },
 
+    category: {
+      type: String,
+      required: "The category is required",
+      trim: true,
+      maxLength: [15, "The category must be less than 15 characters"],
+    },
+
     location: {
       type: String,
       required: "The location is required",
@@ -27,6 +34,15 @@ const partnerSchema = new Schema(
       trim: true,
     },
 
+    duration: {
+      type: Number,
+    },
+
+    picture: {
+      type: String,
+      trim: true,
+    },
+
     description: {
       type: String,
       trim: true,
@@ -42,13 +58,21 @@ const partnerSchema = new Schema(
     url: {
       type: String,
       trim: true,
-      required: "The price is required",
+      required: "The url is required",
     },
 
     author: {
       type: String,
-      required: "The name of the show is required",
+      required: "The author is required",
       trim: true,
+    },
+
+    attendees: {
+      type: Number,
+    },
+
+    likes: {
+      type: Number,
     },
   },
   { timestamps: true }

@@ -3,7 +3,13 @@ require("../config/db.config");
 const Partner = require("../models/partners.model");
 
 Partner.deleteMany({})
-  .then(() => {})
+  .then(() => {
+
+
+
+
+    
+  })
   .catch((error) => {
     console.error(error);
   });

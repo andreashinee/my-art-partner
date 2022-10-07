@@ -10,18 +10,32 @@ const app = express();
 app.use(logger("dev"));
 
 const routes = require("./config/routes.config");
+const { default: mongoose } = require("mongoose");
 
 app.use("/api/v1", routes);
 
 app.use((req, res, next) => next(createError(404, "Route not found")));
 
 app.use((error, req, res, next) => {
-  console.log(error);
+  res.status = error.status || 500;
 
-  const status = error.status || 500;
-  const message = error.message;
+  const data = {};
 
-  res.status(status).json({ message });
+  if (error instanceof mongoose.Error.ValidationError) {
+    res.status(400);
+
+    /*for (field of Object.keys(error.errors)) {
+      error.errors[field] = error.errors[field].message;
+    }*/
+
+    data.errors = error.errors;
+  } else if (error instanceof mongoose.Error.CastError) {
+    error = createError(404, "Resource not found");
+  }
+
+  data.message = error.message;
+
+  res.json(data);
 });
 
 const port = process.env.PORT || 3001;
@@ -29,4 +43,3 @@ app.listen(port, () =>
   console.log(`ART Partner api is connected at port ${port}`)
 );
 
-//52:54
