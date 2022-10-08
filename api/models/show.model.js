@@ -46,7 +46,10 @@ const showSchema = new Schema(
     description: {
       type: String,
       trim: true,
-      maxLength: [1000, "The name of the show must be less than 200 characters"],
+      maxLength: [
+        1000,
+        "The name of the show must be less than 200 characters",
+      ],
     },
 
     price: {

@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const userSchema = new Schema(
-
   {
     name: {
       type: String,
@@ -16,7 +15,7 @@ const userSchema = new Schema(
       trim: true,
     },
 
-   age: {
+    age: {
       type: Number,
       required: "The age is required",
       trim: true,
@@ -28,13 +27,15 @@ const userSchema = new Schema(
       trim: true,
       maxLength: [200, "We don't want to read the bible"],
     },
-    
 
     alterego: {
       type: String,
       required: "The name of the show is required",
       trim: true,
-      maxLength: [10, "The name of your alterego must be less than 40 characters"],
+      maxLength: [
+        10,
+        "The name of your alterego must be less than 40 characters",
+      ],
     },
 
     repertoire: {
