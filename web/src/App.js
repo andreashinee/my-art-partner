@@ -1,12 +1,15 @@
-import { useEffect } from "react";
-import "./App.css";
-import { getPartners } from "./services/partner-service"
+import { useEffect } from 'react';
+import './App.css';
+import { getShows } from "./services/show-service"
 
 function App() {
   useEffect(() => {
-    getPartners();
-  }, []);
-  return <div className="App"></div>;
+    getShows();
+  }, [])
+
+
+  return (<div className="App"></div>
+  );
 }
 
 export default App;
