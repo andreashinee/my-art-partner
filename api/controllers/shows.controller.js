@@ -1,4 +1,4 @@
-const Show = require("../models/shows.model");
+const Show = require("../models/show.model");
 const createError = require("http-errors");
 
 module.exports.list = (req, res, next) => {

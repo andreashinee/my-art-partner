@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const shows = require("../controllers/shows.controller");
-const user = require("../controllers/users.controller");
+const users = require("../controllers/users.controller");
 
 router.get("/shows", shows.list);
 router.post('/shows', shows.create);
