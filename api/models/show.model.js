@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const partnerSchema = new Schema(
+const showSchema = new Schema(
   {
     title: {
       type: String,
@@ -90,5 +90,5 @@ const partnerSchema = new Schema(
   }
 );
 
-const Partner = mongoose.model("Partner", partnerSchema);
-module.exports = Partner;
+const Show = mongoose.model("Show", showSchema);
+module.exports = Show;

@@ -1,14 +1,14 @@
-const Partner = require("../models/partners.model");
+const Show = require("../models/shows.model");
 const createError = require("http-errors");
 
 module.exports.list = (req, res, next) => {
-  Partner.find()
-    .then((partners) => res.json(partners))
+  Show.find()
+    .then((shows) => res.json(shows))
     .catch((error) => next(error));
 };
 
 module.exports.create = (req, res, next) => {
-  Partner.create({
+  Show.create({
     title: req.body.title,
     category: req.body.category,
     location: req.body.location,
@@ -20,24 +20,24 @@ module.exports.create = (req, res, next) => {
     price: req.body.price,
     url: req.body.url,
   })
-    .then((partner) => res.status(201).json(partner))
+    .then((show) => res.status(201).json(show))
     .catch(next);
 };
 
 module.exports.detail = (req, res, next) => {
-  Partner.findById(req.params.id)
-    .then((partner) => {
-      if (partner) {
-        res.json(partner);
+  Show.findById(req.params.id)
+    .then((show) => {
+      if (show) {
+        res.json(show);
       } else {
-        next(createError(404, "Partner not found"));
+        next(createError(404, "Show not found"));
       }
     })
     .catch(next);
 };
 
 module.exports.update = (req, res, next) => {
-  Partner.findByIdAndUpdate(
+  Show.findByIdAndUpdate(
     req.params.id,
     {
       title: req.body.title,
@@ -56,23 +56,23 @@ module.exports.update = (req, res, next) => {
       runValidarors: true,
     }
   )
-    .then((partner) => {
-      if (partner) {
-        res.json(partner);
+    .then((show) => {
+      if (show) {
+        res.json(show);
       } else {
-        next(createError(404, "Partner not found"));
+        next(createError(404, "Show not found"));
       }
     })
     .catch(next);
 };
 
 module.exports.delete = (req, res, next) => {
-  Partner.findByIdAndDelate(req.params.id)
-    .then((partner) => {
-      if (partner) {
+  Show.findByIdAndDelate(req.params.id)
+    .then((show) => {
+      if (show) {
         res.status(204).send();
       } else {
-        next(createError(404, "Partner not found"));
+        next(createError(404, "Show not found"));
       }
     })
     .catch(next);

@@ -6,10 +6,10 @@
 	},
 	"item": [
 		{
-			"name": "Partners",
+			"name": "Shows",
 			"item": [
 				{
-					"name": "List Partners",
+					"name": "List Shows",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -56,7 +56,7 @@
 					"response": []
 				},
 				{
-					"name": "Partner detail",
+					"name": "Show detail",
 					"request": {
 						"method": "GET",
 						"header": []
@@ -64,7 +64,7 @@
 					"response": []
 				},
 				{
-					"name": "Partner update",
+					"name": "Show update",
 					"request": {
 						"method": "PATCH",
 						"header": [],
@@ -76,7 +76,7 @@
 					"response": []
 				},
 				{
-					"name": "Delate Partner",
+					"name": "Delate Show",
 					"request": {
 						"method": "DELETE",
 						"header": []
