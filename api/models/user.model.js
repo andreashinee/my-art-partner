@@ -23,7 +23,7 @@ const UserSchema = new Schema(
       maxLength: [2, "This website is only for humans :)"],
     },
 
-    about: {
+    description: {
       type: String,
       trim: true,
       maxLength: [200, "We don't want to read the bible"],
