@@ -2,14 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const UserSchema = new Schema(
 
-/*
-Estilos musicales: Indie y Rock
-Mi grupo/cantante favorito: Wild Honey
-canción de culto: Matilda de Alt-J
-libro favorito: Ensayo sobre la ceguera
-película favorita: Her
-Pintor/ilustrador favorito: Mark Ryden */
-
   {
     name: {
       type: String,
@@ -18,11 +10,25 @@ Pintor/ilustrador favorito: Mark Ryden */
       maxLength: [10, "The name must be less than 40 characters"],
     },
 
+    city: {
+      type: String,
+      required: "The location is required",
+      trim: true,
+    },
+
+   age: {
+      type: Number,
+      required: "The age is required",
+      trim: true,
+      maxLength: [2, "This website is only for humans :)"],
+    },
+
     about: {
       type: String,
       trim: true,
       maxLength: [200, "We don't want to read the bible"],
     },
+    
 
     alterego: {
       type: String,
@@ -31,66 +37,44 @@ Pintor/ilustrador favorito: Mark Ryden */
       maxLength: [10, "The name of your alterego must be less than 40 characters"],
     },
 
-    category: {
+    repertoire: {
       type: String,
       required: "The category is required",
       trim: true,
-      maxLength: [15, "The category must be less than 15 characters"],
+      maxLength: [50, "Write here your most favorites only"],
     },
 
-    location: {
+    band: {
       type: String,
-      required: "The location is required",
+      required: "The name of your favourite band or singuer is required",
       trim: true,
+      maxLength: [20, "only one!"],
     },
 
-    city: {
+    song: {
       type: String,
-      required: "The city is required",
+      required: "The name of your favourite song is required",
       trim: true,
+      maxLength: [20, "only one!"],
     },
 
-    date: {
-      type: Date,
-      required: "The date is required",
+    book: {
+      type: String,
+      required: "The name of your favourite book",
       trim: true,
+      maxLength: [20, "only one!"],
     },
 
-    duration: {
-      type: Number,
+    ilustrator: {
+      type: String,
+      required: "The name of your favourite ilustrator",
+      trim: true,
+      maxLength: [20, "only one!"],
     },
 
     picture: {
       type: String,
       trim: true,
-    },
-
-    description: {
-      type: String,
-      trim: true,
-      maxLength: [200, "The name of the show must be less than 200 characters"],
-    },
-
-    price: {
-      type: String,
-      trim: true,
-      required: "The price is required",
-    },
-
-    url: {
-      type: String,
-      trim: true,
-      required: "The url is required",
-    },
-
-    author: {
-      type: String,
-      required: "The author is required",
-      trim: true,
-    },
-
-    attendees: {
-      type: Number,
     },
 
     likes: {
