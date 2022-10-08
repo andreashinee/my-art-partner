@@ -24,7 +24,7 @@ app.use((error, req, res, next) => {
   const data = {};
 
   if (error instanceof mongoose.Error.ValidationError) {
-    res.status(400);
+    res.status = 400;
 
     /*for (field of Object.keys(error.errors)) {
       error.errors[field] = error.errors[field].message;
@@ -36,7 +36,8 @@ app.use((error, req, res, next) => {
   }
 
   data.message = error.message;
-
+  
+  res.status(error.status);
   res.json(data);
 });
 
