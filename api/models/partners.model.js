@@ -75,8 +75,20 @@ const partnerSchema = new Schema(
       type: Number,
     },
   },
-  { timestamps: true }
+
+  { 
+    timestamps: true,
+    toJSON: {
+      transform: (doc, ret) => {
+        delete ret._v;
+        ret.id = ret._id;
+        delete ret._id;
+
+        return ret;
+      }
+    }
+  }
 );
 
-const Partner = mongoose.model("Stream", partnerSchema);
+const Partner = mongoose.model("Partner", partnerSchema);
 module.exports = Partner;
