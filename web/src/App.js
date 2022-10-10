@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import { NavBar } from './components/NavBar'
-import { DiscoverShow } from './components/Shows'
+import { NavBar } from './components/navbar/NavBar'
+import { DiscoverShow } from './components/shows/Shows'
 
 function App() {
   return (
