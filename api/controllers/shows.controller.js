@@ -37,7 +37,7 @@ module.exports.detail = (req, res, next) => {
 };
 
 module.exports.update = (req, res, next) => {
-  Show.findByIdAndUpdate(
+  Show.findByIdAndUpdate( //findOneAndUpdate
     req.params.id,
     {
       title: req.body.title,

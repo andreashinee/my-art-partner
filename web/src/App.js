@@ -1,14 +1,19 @@
-import { useEffect } from 'react';
-import './App.css';
-import { getShows } from "./services/show-service"
+import { Routes, Route } from 'react-router-dom'
+import { NavBar } from './components/NavBar'
+import { DiscoverShow } from './components/Shows'
 
 function App() {
-  useEffect(() => {
-    getShows();
-  }, [])
+  return (
+  <>
+    <NavBar/>
 
-
-  return (<div className="App"></div>
+    <div className="App">
+      <Routes>
+       <Route path='/' element={<DiscoverShow />} />
+      </Routes>
+   </div>
+  </>
+  
   );
 }
 
