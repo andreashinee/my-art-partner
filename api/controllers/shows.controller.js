@@ -67,13 +67,7 @@ module.exports.update = (req, res, next) => {
 };
 
 module.exports.delete = (req, res, next) => {
-  Show.findByIdAndDelate(req.params.id)
-    .then((show) => {
-      if (show) {
-        res.status(204).send();
-      } else {
-        next(createError(404, "Show not found"));
-      }
-    })
+  Show.findByIdAndDelete(req.params.id)
+    .then(() => res.status(204).send())
     .catch(next);
 };

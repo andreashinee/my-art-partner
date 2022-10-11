@@ -66,7 +66,6 @@ const showSchema = new Schema(
 
     author: {
       type: String,
-      required: "The author is required",
       trim: true,
     },
 

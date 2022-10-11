@@ -7,12 +7,12 @@ router.get("/shows", shows.list);
 router.post("/shows", shows.create);
 router.get("/shows/:id", shows.detail);
 router.patch("/shows/:id", shows.update);
-router.delete("/shows/id", shows.delete);
+router.delete("/shows/:id", shows.delete);
 
 router.get("/users", users.list);
 router.post("/users", users.create);
 router.get("/users/:id", users.detail);
 router.patch("/users/:id", users.update);
-router.delete("/users/id", users.delete);
+router.delete("/users/:id", users.delete);
 
 module.exports = router;
