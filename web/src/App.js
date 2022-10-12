@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import { NavBar } from './components/navbar/NavBar'
-import { DiscoverShow } from './components/shows/Shows'
+import NavBar from './components/navbar/NavBar';
+import DiscoverScreenShows from './screens/discover/DiscoverScreenShows';
+
+
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
 
     <div className="App">
       <Routes>
-       <Route path='/' element={<DiscoverShow />} />
+       <Route path='/' element={<DiscoverScreenShows />} />
       </Routes>
    </div>
   </>

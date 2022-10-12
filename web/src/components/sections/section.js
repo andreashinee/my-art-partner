@@ -7,7 +7,7 @@ function Section ({className, title, icon, children}) {
       {icon && <i className={`fa fa-${icon} me-1`} />}
       {title}
     </h1>
-    <hr classNAme='mt-0'/>
+    <hr className='mt-0'/>
     {children}
     </section>
   )

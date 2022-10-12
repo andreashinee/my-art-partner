@@ -1,7 +1,9 @@
 import React from "react";
-import { Section, Shows } from "../components";
+import Section from "../../components/sections/section";
+import Shows from "../../components/shows/Shows";
 
-function FindShow() {
+
+function DiscoverScreenShows() {
   return (
     <>
       <Section title="For today" icon="watch" className="mb-3">
@@ -12,14 +14,11 @@ function FindShow() {
         <Shows />
       </Section>
 
-      <Section title="Discover" icon="explorer" className="mb-3">
+      <Section title="Discover" icon="wexplorer" className="mb-3">
         <Shows />
       </Section>
     </>
   );
 }
 
-export default FindShow;
-
-
-//57:38
+export default DiscoverScreenShows;
