@@ -4,7 +4,7 @@ import ShowTemplate from '../shows/ShowTemplate';
 
 function Shows (){
   const [shows, setShows] = useState([]);
-  console.log(shows[0], "ëy")
+  console.log(shows, "ëy")
   useEffect(() => {
     showService.getShows()
     .then(shows => setShows(shows))
