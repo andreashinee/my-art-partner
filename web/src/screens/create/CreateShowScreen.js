@@ -1,8 +1,12 @@
 import React from 'react'
+import Section from '../../components/sections/section'
+
 
 function CreateShowScreen() {
   return (
-    <div>CreateShowScreen</div>
+    <Section title='Add a Show' icon='edit'>
+      
+    </Section>
   )
 }
 

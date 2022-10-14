@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/navbar/NavBar';
-import {DiscoverScreenShows, CreateShowScreen, Home } from './screens';
+import {DiscoverScreenShows, CreateShowScreen, Home, AboutUs } from './screens';
 
 
 
@@ -14,6 +14,7 @@ function App() {
        <Route path='/' element={<Home/>} />
        <Route path='/Shows' element={<DiscoverScreenShows />} />
        <Route path='/AddShow' element={<CreateShowScreen />} />
+       <Route path='/AboutUs' element={<AboutUs />} />
       </Routes>
    </div>
   </>

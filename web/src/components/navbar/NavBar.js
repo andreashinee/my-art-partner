@@ -9,7 +9,7 @@ function NavBar() {
           <Link className="navbar-brand" to="/">{" "}Home{" "}</Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/whoweare">{" "}Who we are?{" "}</Link>
+          <Link className="navbar-brand" to="AboutUs">{" "}About Us{" "}</Link>
         </li>
         <li class="nav-item me-auto">
           <Link className="navbar-brand" to="/Shows">{" "}Shows{" "}</Link>

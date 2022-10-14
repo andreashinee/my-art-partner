@@ -12,7 +12,7 @@ function DiscoverScreenShows() {
    
 
     <>
-       <button onClick={() =>navigate("/AddShow")}>Navega al formulario</button>
+       <button onClick={() =>navigate("/AddShow")}>Add a Show!</button>
       <Section title="For today" icon="watch" className="mb-3">
         <Shows />
       </Section>

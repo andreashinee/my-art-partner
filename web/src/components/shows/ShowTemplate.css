@@ -1,0 +1,5 @@
+.show-item {
+  float: left;
+
+  object-fit: cover;
+}
