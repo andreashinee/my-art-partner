@@ -12,3 +12,8 @@ export function getShows() {
 export function getShow(id) {
   return http.get(`/shows/${id}`).then((res) => res.data);
 }
+
+export function createShow(show){
+  return http.post('/shows', show).then((res) => res.data);
+
+}

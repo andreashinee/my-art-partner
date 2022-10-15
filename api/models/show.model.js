@@ -20,12 +20,14 @@ const showSchema = new Schema(
       type: String,
       required: "The location is required",
       trim: true,
+      maxLength: [30, "The location must be less than 15 characters"],
     },
 
     city: {
       type: String,
       required: "The city is required",
       trim: true,
+      maxLength: [30, "The city name must be less than 15 characters"],
     },
 
     date: {
@@ -46,16 +48,15 @@ const showSchema = new Schema(
     description: {
       type: String,
       trim: true,
-      maxLength: [
-        1000,
-        "The name of the show must be less than 200 characters",
+      maxLength: [1000, "A little description please, we don't want to reed the bible :P",
       ],
     },
 
     price: {
-      type: String,
+      type: Number,
       trim: true,
       required: "The price is required",
+      maxLength: 8,
     },
 
     url: {
