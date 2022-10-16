@@ -7,7 +7,7 @@ function Home() {
     <>
       <div class="video-container">
         <div class="video-container-text">
-          <div>HOLA!</div>
+          <div>Welcome to a new community</div>
         </div>
 
         <video
@@ -18,6 +18,7 @@ function Home() {
             objectFit: "cover",
             position: "relative",
             pointerEvents: "none",
+            
           }}
           playsInline
           loop
@@ -26,6 +27,7 @@ function Home() {
           src={video1}
           autoPlay
           fluid={false}
+          
         />
       </div>
 
