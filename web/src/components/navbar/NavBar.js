@@ -18,7 +18,7 @@ function NavBar() {
           <Link className="navbar-brand" to="/partners">{" "}Find a partner!{" "}</Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/partners">{" "}Hi User!{" "}</Link>
+          <Link className="navbar-brand" to="/user">{" "}Hi User!{" "}</Link>
         </li>
       </div>
     </nav>

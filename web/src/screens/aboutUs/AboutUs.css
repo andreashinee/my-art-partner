@@ -4,7 +4,7 @@ video {
   
 }
 
-.video-container-text {
+.video-container-text-user {
   z-index: 8;
   top: 50%;
   left: 50%;
@@ -17,16 +17,28 @@ video {
 
 
 
-.video-container-text div {
+.video-container-text-user div {
   position: absolute;
   color: white;
   z-index: 10;
   float: left;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Figtree', sans-serif;
-  font-size: 40px;
+  font-size: 60px;
   
 }
 
+.video-container-text-user p {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  float: left;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Figtree', sans-serif;
+  font-size: 30px;
+  
+}

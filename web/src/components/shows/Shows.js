@@ -12,6 +12,8 @@ function Shows (){
   }, [])
 
   return (
+<>
+ 
     <div className=" row row-cols-12 row-cols-sm-6 row-cols-md-5">
     {shows.map((show) => (
       <div className='col' key={show.id}>
@@ -19,6 +21,7 @@ function Shows (){
       </div>
     ))}
     </div>
+    </>
   )
 
 }

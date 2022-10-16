@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as showService from '../../services/show-service';
 
+
 function ShowForm() {
   const { register, handleSubmit, setError, formState: { errors, isValid } } = useForm( {mode: 'onTouched'});
   const handleCreateShowSubmit = (data) => {
@@ -20,6 +21,7 @@ function ShowForm() {
   }
 
   return (
+    <>
 <form onSubmit={handleSubmit (handleCreateShowSubmit)}>
     <div className="input-group mb-1">
       <span className="input-group-text"><i className= 'fa fa-tag fa-fw'></i></span>
@@ -120,9 +122,10 @@ function ShowForm() {
 
 
     <div className='d-grid mt-2'>
-      <button className='btn btn-success' type='submit' disabled={!isValid}> Add a Show!</button>
+      <button className='btn-success' type='submit' disabled={!isValid}> Add a Show!</button>
     </div>
 </form>
+</>
   )
 }
 

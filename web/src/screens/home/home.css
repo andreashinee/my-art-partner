@@ -13,7 +13,8 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Figtree', sans-serif;
-  font-size: 40px;
-  
+  font-size: 50px;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
 }
 

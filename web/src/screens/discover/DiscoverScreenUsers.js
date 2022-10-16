@@ -1,19 +1,21 @@
 import React from "react";
-import { Section, UserList } from "../../components";
+import Section from "../../components/sections/Section";
+import Users from "../../components/users/Users";
+import { useNavigate } from "react-router-dom";
+import './DescoverScreen.css'
 
 function DiscoverScreenUsers() {
+  const navigate = useNavigate();
+
   return (
     <>
+      <br />
+      <h2>Partners</h2>
+      <br />
+      <button onClick={() => navigate("/Register")}>Register now!</button>
+      <br />
       <Section title="For today" icon="watch" className="mb-3">
-        <UserList />
-      </Section>
-
-      <Section title="Most popular" icon="fire" className="mb-3">
-        <UserList />
-      </Section>
-
-      <Section title="Discover" icon="wexplorer" className="mb-3">
-        <UserList />
+        <Users />
       </Section>
     </>
   );

@@ -5,9 +5,10 @@ import './AboutUs.css'
 function AboutUs() {
   return (
     <>
-      <div class="video-container">
-        <div class="video-container-text">
-          <div>Welcome to a new community</div>
+      <div class="video-container-user">
+        <div class="video-container-text-user">
+          <div>Who we are?</div>
+          <p> hddndjndjndjndj</p>
         </div>
 
         <video

@@ -6,13 +6,14 @@ const userSchema = new Schema(
       type: String,
       required: "The name of the show is required",
       trim: true,
-      maxLength: [10, "The name must be less than 40 characters"],
+      maxLength: [20, "The name must be less than 20 characters"],
     },
 
     city: {
       type: String,
       required: "The location is required",
       trim: true,
+      maxLength: [20, "The name of your city must be less than 20 characters"],
     },
 
     age: {
@@ -25,22 +26,19 @@ const userSchema = new Schema(
     description: {
       type: String,
       trim: true,
-      maxLength: [200, "We don't want to read the bible"],
+      maxLength: [500, "We don't want to read the bible"],
     },
 
     alterego: {
       type: String,
-      required: "The name of the show is required",
+      required: "The name of the your alterego is required",
       trim: true,
-      maxLength: [
-        10,
-        "The name of your alterego must be less than 40 characters",
-      ],
+      maxLength: [ 20,"The name of your alterego must be less than 40 characters"],
     },
 
     repertoire: {
       type: String,
-      required: "The category is required",
+      required: "Your music repertoire is required",
       trim: true,
       maxLength: [50, "Write here your most favorites only"],
     },
@@ -61,7 +59,7 @@ const userSchema = new Schema(
 
     book: {
       type: String,
-      required: "The name of your favourite book",
+      required: "The name of your favourite book is required",
       trim: true,
       maxLength: [20, "only one!"],
     },
