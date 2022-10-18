@@ -4,18 +4,6 @@ video {
   
 }
 
-.video-container-text-user {
-  z-index: 8;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  height: 50%;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid red;
-  
-}
-
-
 
 .video-container-text-user div {
   position: absolute;
@@ -26,13 +14,16 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Figtree', sans-serif;
-  font-size: 60px;
+  font-size: 60px;  
+
+  
   
 }
 
 .video-container-text-user p {
   position: absolute;
   color: white;
+  padding: 50px;
   z-index: 10;
   float: left;
   top: 55%;
@@ -40,5 +31,7 @@ video {
   transform: translate(-50%, -50%);
   font-family: 'Figtree', sans-serif;
   font-size: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid red;
   
 }

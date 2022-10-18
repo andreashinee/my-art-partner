@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as showService from '../../services/show-service';
+import { DevTool } from "@hookform/devtools";
+
 
 
 function ShowForm() {
@@ -22,6 +24,7 @@ function ShowForm() {
 
   return (
     <>
+
 <form onSubmit={handleSubmit (handleCreateShowSubmit)}>
     <div className="input-group mb-1">
       <span className="input-group-text"><i className= 'fa fa-tag fa-fw'></i></span>
@@ -92,7 +95,7 @@ function ShowForm() {
 
     <div className="input-group mb-1">
       <span className="input-group-text"><i className= 'fa fa-tag fa-fw'></i></span>
-      <input type="text" className={`form-control ${errors.description ? 'is-invalid' : '' }`} placeholder="description"
+      <textarea type="text" className={`form-control ${errors.description ? 'is-invalid' : '' }`} placeholder="description"
       {...register('description', {
         maxLength: {value: 1000, message: "A little description please, we don't want to reed the bible :P"}
       })} />
@@ -115,14 +118,22 @@ function ShowForm() {
       <span className="input-group-text"><i className= 'fa fa-tag fa-fw'></i></span>
       <input type="text" className={`form-control ${errors.url ? 'is-invalid' : '' }`} placeholder="url"
       {...register('url', { 
-        required: "The url is required"
+        required: "The url is required",
+        validate: (value) => {
+            try {
+              new URL(value); 
+              return true;
+            } catch (error) {
+              return 'Url is not valid';
+            }
+        }
       })} />
       {errors.url && (<div className="invalid-feedback">{errors.url.message}</div>)}
     </div>
 
 
     <div className='d-grid mt-2'>
-      <button className='btn-success' type='submit' disabled={!isValid}> Add a Show!</button>
+      <button className='btn-success' type='submit'> Add a Show!</button>
     </div>
 </form>
 </>
