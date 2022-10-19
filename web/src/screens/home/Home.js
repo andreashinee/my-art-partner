@@ -1,6 +1,6 @@
 import React from "react";
 import video1 from "../../components/images/show-video.mp4";
-import './home.css'
+import "./home.css";
 
 function Home() {
   return (
@@ -18,7 +18,6 @@ function Home() {
             objectFit: "cover",
             position: "relative",
             pointerEvents: "none",
-            
           }}
           playsInline
           loop
@@ -27,10 +26,8 @@ function Home() {
           src={video1}
           autoPlay
           fluid={false}
-          
         />
       </div>
-
     </>
   );
 }

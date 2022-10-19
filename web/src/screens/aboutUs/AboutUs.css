@@ -1,7 +1,7 @@
 video {
   position: relative;
   z-index: inherit;
-  
+
 }
 
 
@@ -14,10 +14,10 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Figtree', sans-serif;
-  font-size: 60px;  
+  font-size: 60px;
 
-  
-  
+
+
 }
 
 .video-container-text-user p {
@@ -33,5 +33,5 @@ video {
   font-size: 30px;
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid red;
-  
+
 }

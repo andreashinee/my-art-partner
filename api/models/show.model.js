@@ -2,6 +2,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const categories = require("../data/categories");
 
+const isURL = (value) => {
+  try {
+    new URL(value);
+    return true;
+  } catch (error) {
+    return "Url is not valid";
+  }
+};
+
 const showSchema = new Schema(
   {
     title: {
@@ -67,6 +76,10 @@ const showSchema = new Schema(
       type: String,
       trim: true,
       required: "The url is required",
+      validate: {
+        validator: isURL,
+        message: "Url is not valid",
+      },
     },
 
     author: {

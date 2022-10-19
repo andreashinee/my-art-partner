@@ -6,19 +6,34 @@ function NavBar() {
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/">{" "}Home{" "}</Link>
+          <Link className="navbar-brand" to="/">
+            {" "}
+            Home{" "}
+          </Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="AboutUs">{" "}About Us{" "}</Link>
+          <Link className="navbar-brand" to="AboutUs">
+            {" "}
+            About Us{" "}
+          </Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/Shows">{" "}Shows{" "}</Link>
+          <Link className="navbar-brand" to="/Shows">
+            {" "}
+            Shows{" "}
+          </Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/partners">{" "}Find a partner!{" "}</Link>
+          <Link className="navbar-brand" to="/partners">
+            {" "}
+            Find a partner!{" "}
+          </Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/user">{" "}Hi User!{" "}</Link>
+          <Link className="navbar-brand" to="/user">
+            {" "}
+            Hi User!{" "}
+          </Link>
         </li>
       </div>
     </nav>

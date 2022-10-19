@@ -4,7 +4,6 @@ const createError = require("http-errors");
 const express = require("express");
 const logger = require("morgan");
 
-
 require("./config/db.config");
 
 const app = express();
@@ -45,9 +44,7 @@ app.use((error, req, res, next) => {
   res.send(data);
 });
 
-
 const port = process.env.PORT || 3001;
 app.listen(port, () =>
   console.log(`ART Partner api is connected at port ${port}`)
 );
-

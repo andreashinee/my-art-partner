@@ -1,6 +1,6 @@
 import React from "react";
 import video2 from "../../components/images/people-video.mp4";
-import './AboutUs.css'
+import "./AboutUs.css";
 
 function AboutUs() {
   return (
@@ -19,7 +19,6 @@ function AboutUs() {
             objectFit: "cover",
             position: "relative",
             pointerEvents: "none",
-            
           }}
           playsInline
           loop
@@ -28,10 +27,8 @@ function AboutUs() {
           src={video2}
           autoPlay
           fluid={false}
-          
         />
       </div>
-
     </>
   );
 }

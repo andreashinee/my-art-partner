@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import * as userService from "../../services/user-service";
 import Select from "react-select";
 import categories from "../../inmemory/Categories";
@@ -8,6 +9,7 @@ import "./Form.css";
 
 function UserForm() {
   const [loading, setLoading] = useState(false);
+  const navigation = useNavigate();
   const {
     register,
     handleSubmit,
@@ -23,7 +25,7 @@ function UserForm() {
     setLoading(true);
     userService
       .createUser(data)
-      .then((user) => console.log("Everything is ok!", user))
+      .then((user) => navigation("/Users"))
       .catch((error) => {
         if (error.response?.data?.errors) {
           const { errors } = error.response.data;

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import * as showService from "../../services/show-service";
 import Select from "react-select";
 import categories from "../../inmemory/Categories";
 import { ColorRing } from "react-loader-spinner";
 import "./Form.css";
+//si al final cal fer una funció URL mirar video de DISS num2 min 12
 
 function ShowForm() {
   const [loading, setLoading] = useState(false);
+  const navigation = useNavigate();
   const {
     register,
     handleSubmit,
@@ -23,7 +26,7 @@ function ShowForm() {
     setLoading(true);
     showService
       .createShow(data)
-      .then((show) => console.log("Everything is ok!", show))
+      .then((show) => navigation("/Shows"))
       .catch((error) => {
         if (error.response?.data?.errors) {
           const { errors } = error.response.data;
@@ -53,7 +56,7 @@ function ShowForm() {
         <form className="form" onSubmit={handleSubmit(handleCreateShowSubmit)}>
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-microphone fa-fw"></i>
             </span>
             <input
               type="text"
@@ -79,7 +82,7 @@ function ShowForm() {
             render={({ field: { onBlur, onChange, value } }) => (
               <div className="input-group mb-1">
                 <span className="input-group-text">
-                  <i className="fa fa-tag fa-fw"></i>
+                  <i className="fa fa-music fa-fw"></i>
                 </span>
                 <Select
                   className="form-control p-0"
@@ -110,7 +113,7 @@ function ShowForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-map fa-fw"></i>
             </span>
             <input
               type="text"
@@ -131,7 +134,7 @@ function ShowForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-map fa-fw"></i>
             </span>
             <input
               type="text"
@@ -152,7 +155,7 @@ function ShowForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-calendar fa-fw"></i>
             </span>
             <input
               type="text"
@@ -184,7 +187,7 @@ function ShowForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-image fa-fw"></i>
             </span>
             <input
               type="text"
@@ -199,7 +202,7 @@ function ShowForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-pencil fa-fw"></i>
             </span>
             <textarea
               type="text"
@@ -224,7 +227,7 @@ function ShowForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-money fa-fw"></i>
             </span>
             <input
               type="text"
@@ -266,7 +269,7 @@ function ShowForm() {
           </div>
 
           <div className="d-grid mt-2">
-            <button className="btn-success" type="submit">
+            <button className="btn-success" type="submit" disabled={!isValid}>
               {" "}
               Add a Show!
             </button>

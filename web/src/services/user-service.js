@@ -2,7 +2,7 @@ import axios from "axios";
 
 const http = axios.create({
   baseURL: "http://localhost:3001/api/v1",
-  withCredentials: true
+  withCredentials: true,
 });
 
 export function getUsers() {
@@ -13,7 +13,6 @@ export function getUser(id) {
   return http.get(`/users/${id}`).then((res) => res.data);
 }
 
-export function createUser(user){
-  return http.post('/users', user).then((res) => res.data);
-
+export function createUser(user) {
+  return http.post("/users", user).then((res) => res.data);
 }

@@ -14,7 +14,7 @@ h2 {
 
 button {
 
-  font-family:'Figtree', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
@@ -48,7 +48,8 @@ button:active {
   margin-right: 150px;
   margin-left: 80px;
   gap: 10px;
-  gap: 10px 20px; /* row-gap column gap */
+  gap: 10px 20px;
+  /* row-gap column gap */
   row-gap: 10px;
   column-gap: 20px;
   align-content: center;
@@ -62,7 +63,8 @@ button:active {
   margin-right: 50px;
   margin-left: 50px;
   gap: 10px;
-  gap: 10px 20px; /* row-gap column gap */
+  gap: 10px 20px;
+  /* row-gap column gap */
   row-gap: 10px;
   column-gap: 20px;
   align-content: center;

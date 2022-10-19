@@ -1,7 +1,7 @@
 video {
   position: relative;
   z-index: inherit;
-  
+
 }
 
 .video-container-text div {
@@ -17,4 +17,3 @@ video {
   flex-wrap: wrap;
   text-overflow: ellipsis;
 }
-

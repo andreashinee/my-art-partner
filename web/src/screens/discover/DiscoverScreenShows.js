@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../../components/sections/Section";
 import Shows from "../../components/shows/Shows";
 import { useNavigate } from "react-router-dom";
-import './DescoverScreen.css'
+import "./DescoverScreen.css";
 
 function DiscoverScreenShows() {
   const navigate = useNavigate();

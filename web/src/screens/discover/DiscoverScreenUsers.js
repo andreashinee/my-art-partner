@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../../components/sections/Section";
 import Users from "../../components/users/Users";
 import { useNavigate } from "react-router-dom";
-import './DescoverScreen.css'
+import "./DescoverScreen.css";
 
 function DiscoverScreenUsers() {
   const navigate = useNavigate();
