@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const categories = require("../data/categories");
+
 const showSchema = new Schema(
   {
     title: {
@@ -13,7 +15,7 @@ const showSchema = new Schema(
       type: String,
       required: "The category is required",
       trim: true,
-      maxLength: [15, "The category must be less than 15 characters"],
+      enum: categories.map((category) => category.value),
     },
 
     location: {
@@ -48,7 +50,9 @@ const showSchema = new Schema(
     description: {
       type: String,
       trim: true,
-      maxLength: [1000, "A little description please, we don't want to reed the bible :P",
+      maxLength: [
+        1000,
+        "A little description please, we don't want to reed the bible :P",
       ],
     },
 

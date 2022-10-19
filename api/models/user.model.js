@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const categories = require("../data/categories");
+
 const userSchema = new Schema(
   {
     name: {
@@ -33,14 +35,17 @@ const userSchema = new Schema(
       type: String,
       required: "The name of the your alterego is required",
       trim: true,
-      maxLength: [ 20,"The name of your alterego must be less than 40 characters"],
+      maxLength: [
+        20,
+        "The name of your alterego must be less than 40 characters",
+      ],
     },
 
-    repertoire: {
+    category: {
       type: String,
-      required: "Your music repertoire is required",
+      required: "The category is required",
       trim: true,
-      maxLength: [50, "Write here your most favorites only"],
+      enum: categories.map((category) => category.value),
     },
 
     band: {

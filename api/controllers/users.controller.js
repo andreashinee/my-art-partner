@@ -42,7 +42,18 @@ module.exports.update = (req, res, next) => {
   User.findByIdAndUpdate(
     req.params.id,
     {
-c
+      name: req.body.name,
+      city: req.body.city,
+      age: req.body.age,
+      city: req.body.city,
+      alterego: req.body.alterego,
+      repertoire: req.body.repertoire,
+      picture: req.body.picture,
+      description: req.body.description,
+      band: req.body.band,
+      song: req.body.song,
+      book: req.body.book,
+      ilustrator: req.body.ilustrator,
     },
     {
       new: true,
