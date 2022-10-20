@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const shows = require("../controllers/shows.controller");
 const users = require("../controllers/users.controller");
+const auth = require("../controllers/auth.controller")
+
+
+router.post('/register', auth.register)
 
 router.get("/shows", shows.list);
 router.post("/shows", shows.create);

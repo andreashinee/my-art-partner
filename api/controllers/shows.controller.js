@@ -3,6 +3,7 @@ const createError = require("http-errors");
 
 module.exports.list = (req, res, next) => {
   Show.find()
+    .populate('owner', 'name email')
     .then((shows) => res.json(shows))
     .catch((error) => next(error));
 };
@@ -26,6 +27,7 @@ module.exports.create = (req, res, next) => {
 
 module.exports.detail = (req, res, next) => {
   Show.findById(req.params.id)
+  .populate('owner', 'name email')
     .then((show) => {
       if (show) {
         res.json(show);
@@ -37,8 +39,7 @@ module.exports.detail = (req, res, next) => {
 };
 
 module.exports.update = (req, res, next) => {
-  Show.findByIdAndUpdate(
-    //findOneAndUpdate
+  Show.findByIdAndUpdate( //findOneAndUpdate
     req.params.id,
     {
       title: req.body.title,
