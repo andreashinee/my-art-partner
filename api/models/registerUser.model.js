@@ -34,7 +34,18 @@ const registerUserSchema = new Schema(
     },
   }, 
   {
-    timestamps: true
+    timestamps: true,
+    toJSON: {
+      transform: (doc, ret) => {
+        delete ret._v;
+        ret.id = ret._id;
+        delete ret._id;
+        delete ret.password;
+
+        return ret;
+      },
+    },
+  
   }
   
   );
@@ -55,7 +66,7 @@ const registerUserSchema = new Schema(
     return bcrypt.compare(passwordToMatch, this.password)
   }
 
-const User = mongoose.model('RegisterUser', registerUserSchema);
+const RegisterUser = mongoose.model('RegisterUser', registerUserSchema);
 
 module.exports = RegisterUser;
  

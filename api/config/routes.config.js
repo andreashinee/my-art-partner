@@ -5,7 +5,8 @@ const users = require("../controllers/users.controller");
 const auth = require("../controllers/auth.controller")
 
 
-router.post('/register', auth.register)
+router.post('/register', auth.register);
+router.post('/authenticate', auth.authenticate);
 
 router.get("/shows", shows.list);
 router.post("/shows", shows.create);
