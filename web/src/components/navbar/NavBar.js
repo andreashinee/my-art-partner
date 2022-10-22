@@ -30,7 +30,7 @@ function NavBar() {
           </Link>
         </li>
         <li class="nav-item me-auto">
-          <Link className="navbar-brand" to="/user">
+          <Link className="navbar-brand" to="/login">
             {" "}
             Hi User!{" "}
           </Link>

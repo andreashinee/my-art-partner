@@ -22,13 +22,13 @@ function ShowForm() {
   console.log("categories", watch("categories"));
 
   const handleCreateShowSubmit = (data) => {
-   // data.category = data.categories[0]
+    // data.category = data.categories[0]
     console.log(data);
-    console.log(loading, "ëy")
+    console.log(loading, "ëy");
     showService
       .createShow(data)
-      .then((show) =>{ 
-        navigation("/Shows")
+      .then((show) => {
+        navigation("/Shows");
         setLoading(true);
       })
       .catch((error) => {

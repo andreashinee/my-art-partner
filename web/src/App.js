@@ -7,6 +7,7 @@ import {
   AboutUs,
   DiscoverScreenUsers,
   CreateUserScreen,
+  LoginScreen
 } from "./screens";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/partners" element={<DiscoverScreenUsers />} />
           <Route path="/Register" element={<CreateUserScreen />} />
+          <Route path="/login" element={<LoginScreen />} />
         </Routes>
       </div>
     </>

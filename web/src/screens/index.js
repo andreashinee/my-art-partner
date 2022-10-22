@@ -4,3 +4,4 @@ export { default as Home } from "./home/Home";
 export { default as AboutUs } from "./aboutUs/AboutUs";
 export { default as DiscoverScreenUsers } from "./discover/DiscoverScreenUsers";
 export { default as CreateUserScreen } from "./create/CreateUserScreen";
+export { default as LoginScreen } from "./login/LoginScreen";

@@ -10,7 +10,7 @@ router.post("/register", auth.register);
 router.post("/authenticate", auth.authenticate);
 router.delete("/logout", auth.logout);
 
-router.get("/shows", shows.list);
+router.get("/shows", secure.isAuthenticated, shows.list);
 router.post("/shows", secure.isAuthenticated, shows.create);
 router.get("/shows/:id", shows.detail);
 router.patch("/shows/:id", secure.isAuthenticated, showMid.isOwnedByUser, shows.update);
