@@ -20,11 +20,16 @@ const showSchema = new Schema(
       maxLength: [40, "The name of the show must be less than 40 characters"],
     },
 
-    category: {
-      type: String,
-      required: "The category is required",
-      trim: true,
-      enum: categories.map((category) => category.value),
+    categories: {
+      type: [
+        {
+          type: String,
+          required: "Category is required",
+          enum: categories.map((category) => category.value),
+          trim: true,
+        },
+      ],
+      default: [],
     },
 
     location: {
@@ -83,8 +88,9 @@ const showSchema = new Schema(
     },
 
     author: {
-      type: String,
-      trim: true,
+      ref: 'RegisterUser',
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
     },
 
     attendees: {

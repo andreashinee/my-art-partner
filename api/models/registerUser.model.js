@@ -27,9 +27,6 @@ const registerUserSchema = new Schema(
     password: {
       type: String,
       required: "Password is required",
-      trim: true,
-      lowercase: true,
-      unique: true,
       match: [PASSWORD_PATTERN, 'Password needs at least 8 chars']
     },
   }, 
@@ -52,6 +49,7 @@ const registerUserSchema = new Schema(
 
   registerUserSchema.pre('save', function (next){
     if (this.isModified('password')) {
+      console.log('´cifrando password', this.password)
       bcrypt.hash(this.password, WORK_FACTOR)
       .then(hash => {
         this.password = hash;
@@ -63,6 +61,7 @@ const registerUserSchema = new Schema(
   });
 
   registerUserSchema.methods.checkPassword = function (passwordToMatch){
+    console.log('comparando password', passwordToMatch, this.password)
     return bcrypt.compare(passwordToMatch, this.password)
   }
 
