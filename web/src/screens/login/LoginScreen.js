@@ -1,34 +1,38 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import * as Services from "../../services/show-service";
+import { authenticate } from "../../services/show-service";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 function LoginScreen() {
   const navigation = useNavigate();
- const value = useContext(AuthContext);
+  const value = useContext(AuthContext);
 
-  const { register, handleSubmit, setError, formState: { errors, isValid } } = useForm({ mode: "onTouched" });
+  const {
+    register,
+    handleSubmit,
+    setError,
+    control,
+    watch,
+    formState: { errors, isValid },
+  } = useForm({ mode: "onTouched" });
 
   const handleLogin = (data) => {
-    Services
-      .authenticate(data)
+    authenticate(data)
       .then((data) => {
-       value.setRegisterUser(data);
+        value.setRegisterUser(data);
         navigation("/");
       })
 
       .catch((error) => {
         if (error.response?.data?.errors) {
           const { errors } = error.response.data;
-          console.log(errors);
           Object.keys(error.response.data.errors).forEach((error) => {
-            setError(error, { message: errors[error].message });
+            setError(error, { type: "custom", message: errors[error].message });
           });
         }
       });
   };
-
 
   return (
     <div>
@@ -38,7 +42,7 @@ function LoginScreen() {
             <i className="fa fa-user fa-fw"></i>
           </span>
           <input
-            type="email"
+            type="text"
             className={`form-control ${errors.email ? "is-invalid" : ""}`}
             placeholder="email"
             {...register("email", {
@@ -55,7 +59,7 @@ function LoginScreen() {
             <i className="fa fa-key fa-fw"></i>
           </span>
           <input
-            type="password"
+            type="text"
             className={`form-control ${errors.password ? "is-invalid" : ""}`}
             placeholder="password"
             {...register("password", {

@@ -5,8 +5,8 @@ import "./home.css";
 function Home() {
   return (
     <>
-      <div class="video-container">
-        <div class="video-container-text">
+      <div className="video-container">
+        <div className="video-container-text">
           <div>Welcome to a new community</div>
         </div>
 
@@ -25,7 +25,7 @@ function Home() {
           alt="All the devices"
           src={video1}
           autoPlay
-          fluid={false}
+
         />
       </div>
     </>

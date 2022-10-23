@@ -5,8 +5,8 @@ import "./AboutUs.css";
 function AboutUs() {
   return (
     <>
-      <div class="video-container-user">
-        <div class="video-container-text-user">
+      <div className="video-container-user">
+        <div className="video-container-text-user">
           <div>Who we are?</div>
           <p> hddndjndjndjndj</p>
         </div>
@@ -26,7 +26,6 @@ function AboutUs() {
           alt="All the devices"
           src={video2}
           autoPlay
-          fluid={false}
         />
       </div>
     </>
