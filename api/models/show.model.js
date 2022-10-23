@@ -88,7 +88,7 @@ const showSchema = new Schema(
     },
 
     author: {
-      ref: 'RegisterUser',
+      ref: "RegisterUser",
       type: mongoose.Schema.Types.ObjectId,
       required: true,
     },

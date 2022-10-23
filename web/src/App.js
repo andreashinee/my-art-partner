@@ -1,4 +1,6 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { AuthContext } from "./context/AuthContext";
+import { useContext } from "react";
 import NavBar from "./components/navbar/NavBar";
 import {
   DiscoverScreenShows,
@@ -9,6 +11,21 @@ import {
   CreateUserScreen,
   LoginScreen
 } from "./screens";
+
+
+function AuthGuard({ children }) {
+  const { registerUser } = useContext(AuthContext);
+
+  if (!registerUser) {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
+}
+
+
+
+
 
 function App() {
   return (
@@ -24,6 +41,7 @@ function App() {
           <Route path="/partners" element={<DiscoverScreenUsers />} />
           <Route path="/Register" element={<CreateUserScreen />} />
           <Route path="/login" element={<LoginScreen />} />
+
         </Routes>
       </div>
     </>

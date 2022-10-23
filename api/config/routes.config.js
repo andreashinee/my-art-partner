@@ -16,6 +16,10 @@ router.get("/shows/:id", shows.detail);
 router.patch("/shows/:id", secure.isAuthenticated, showMid.isOwnedByUser, shows.update);
 router.delete("/shows/:id", secure.isAuthenticated, showMid.isOwnedByUser, shows.delete);
 
+
+
+//
+
 router.get("/users", users.list);
 router.post("/users", users.create);
 router.get("/users/:id", users.detail);
