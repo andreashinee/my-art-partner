@@ -31,8 +31,7 @@ export function createShow(show) {
 }
 
 export function authenticate(data) {
-  return http.post('/authenticate', data);
-
+  return http.post("/authenticate", data);
 }
 
 export function getSingleShow(id, data) {

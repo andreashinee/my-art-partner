@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from '../../context/AuthContext'
+import { AuthContext } from "../../context/AuthContext";
 
 function NavBar() {
-  const user= useContext(AuthContext)
-  console.log("huhuhuhu", user)
+  const user = useContext(AuthContext);
+  console.log("huhuhuhu", user);
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container-fluid">

@@ -9,10 +9,9 @@ import {
   AboutUs,
   DiscoverScreenUsers,
   CreateUserScreen,
-  LoginScreen
+  LoginScreen,
 } from "./screens";
 import SingleShow from "./components/shows/SingleShow";
-
 
 function AuthGuard({ children }) {
   const { registerUser } = useContext(AuthContext);
@@ -23,10 +22,6 @@ function AuthGuard({ children }) {
 
   return children;
 }
-
-
-
-
 
 function App() {
   return (
@@ -43,7 +38,6 @@ function App() {
           <Route path="/Register" element={<CreateUserScreen />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/shows/:id" element={<SingleShow />} />
-  
         </Routes>
       </div>
     </>

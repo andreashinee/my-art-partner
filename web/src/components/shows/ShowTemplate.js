@@ -16,10 +16,15 @@ function ShowTemplate({ id, title, picture, city, date }) {
         alt={title}
       />
       <div className="mt-2 fs-2 justify-content-between align-items-baseline">
-        <h3 className="m-2 fs-4 fw-lighter"> {title}</h3>
+        <h3 className="m-2 fs-4"> {title}</h3>
         <h6 className="m-2 fs-6 fw-lighter"> {city}</h6>
-        <h6 className="m-2 fs-6 fw-lighter"> {moment(date).utc().format("DD-MM-YYYY")}</h6>
-        <Link className="m-2 fw-lighter" to={`/shows/${id}`} >More information!</Link>
+        <h6 className="m-2 fs-6 fw-lighter">
+          {" "}
+          {moment(date).utc().format("DD-MM-YYYY")}
+        </h6>
+        <Link className="m-2 fs-5 fw-lighter" to={`/shows/${id}`}>
+          More information!
+        </Link>
       </div>
     </div>
   );
