@@ -11,6 +11,7 @@ import {
   CreateUserScreen,
   LoginScreen
 } from "./screens";
+import SingleShow from "./components/shows/SingleShow";
 
 
 function AuthGuard({ children }) {
@@ -41,7 +42,8 @@ function App() {
           <Route path="/partners" element={<DiscoverScreenUsers />} />
           <Route path="/Register" element={<CreateUserScreen />} />
           <Route path="/login" element={<LoginScreen />} />
-
+          <Route path="/shows/:id" element={<SingleShow />} />
+  
         </Routes>
       </div>
     </>

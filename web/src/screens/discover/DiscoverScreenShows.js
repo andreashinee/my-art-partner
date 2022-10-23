@@ -14,7 +14,7 @@ function DiscoverScreenShows() {
       <br />
       <button onClick={() => navigate("/AddShow")}>Add a Show!</button>
       <br />
-      <Section title="For today" icon="watch" className="mb-3">
+      <Section title=" " icon="watch" className="mb-3">
         <Shows />
       </Section>
     </>

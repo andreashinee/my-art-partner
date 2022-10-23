@@ -12,8 +12,6 @@ function LoginScreen() {
     register,
     handleSubmit,
     setError,
-    control,
-    watch,
     formState: { errors, isValid },
   } = useForm({ mode: "onTouched" });
 
@@ -42,7 +40,7 @@ function LoginScreen() {
             <i className="fa fa-user fa-fw"></i>
           </span>
           <input
-            type="text"
+            type="email"
             className={`form-control ${errors.email ? "is-invalid" : ""}`}
             placeholder="email"
             {...register("email", {
@@ -59,7 +57,7 @@ function LoginScreen() {
             <i className="fa fa-key fa-fw"></i>
           </span>
           <input
-            type="text"
+            type="password"
             className={`form-control ${errors.password ? "is-invalid" : ""}`}
             placeholder="password"
             {...register("password", {

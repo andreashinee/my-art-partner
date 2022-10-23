@@ -26,12 +26,7 @@ function NavBar() {
             Shows{" "}
           </Link>
         </li>
-        <li className="nav-item me-auto">
-          <Link className="navbar-brand" to="/partners">
-            {" "}
-            Find a partner!{" "}
-          </Link>
-        </li>
+
         <li className="nav-item me-auto">
           <Link className="navbar-brand" to="/login">
             {" "}

@@ -7,7 +7,15 @@ function Home() {
     <>
       <div className="video-container">
         <div className="video-container-text">
-          <div>Welcome to a new community</div>
+          <div>
+            <h1>
+              <span>Welcome&nbsp;</span>
+              <span> to&nbsp;</span>
+              <span> a&nbsp;</span>
+              <span> new&nbsp;</span>
+              <span> Comunity&nbsp;</span>
+            </h1>
+          </div>
         </div>
 
         <video
@@ -25,7 +33,6 @@ function Home() {
           alt="All the devices"
           src={video1}
           autoPlay
-
         />
       </div>
     </>
