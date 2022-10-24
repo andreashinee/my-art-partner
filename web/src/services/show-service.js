@@ -34,6 +34,8 @@ export function authenticate(data) {
   return http.post("/authenticate", data);
 }
 
+
+
 export function getSingleShow(id, data) {
   return http.get(`/shows/${id}`, data).then((res) => res.data);
 }

@@ -9,6 +9,7 @@ function DiscoverScreenShows() {
 
   return (
     <>
+      <div ClassName='screen'>
       <br />
       <h2>Shows</h2>
       <br />
@@ -17,6 +18,7 @@ function DiscoverScreenShows() {
       <Section title=" " icon="watch" className="mb-3">
         <Shows />
       </Section>
+      </div>
     </>
   );
 }

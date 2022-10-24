@@ -20,10 +20,10 @@ router.delete("/shows/:id", secure.isAuthenticated, showMid.isOwnedByUser, shows
 
 //
 
-router.get("/users", users.list);
-router.post("/users", users.create);
+router.get("/users", secure.isAuthenticated, users.list);
+router.post("/users", secure.isAuthenticated, users.create);
 router.get("/users/:id", users.detail);
-router.patch("/users/:id", users.update);
-router.delete("/users/:id", users.delete);
+router.patch("/users/:id", secure.isAuthenticated, showMid.isOwnedByUser, users.update);
+router.delete("/users/:id", secure.isAuthenticated,showMid.isOwnedByUser,  users.delete);
 
 module.exports = router;

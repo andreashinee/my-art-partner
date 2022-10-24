@@ -28,6 +28,11 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 button:active {
@@ -41,3 +46,11 @@ button:active {
     padding: 0.25em 0.75em;
   }
 }
+
+.screen{
+
+  margin-top: -60px;
+  
+}
+
+

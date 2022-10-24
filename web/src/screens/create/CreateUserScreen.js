@@ -9,12 +9,12 @@ function CreateUserScreen() {
     <>
       <h2>Create your user</h2>
       <br />
-      <Section title="Register now!" icon="edit">
+      <Section title=" " icon=" ">
         <div className="box-form ">
           <video
             style={{
-              maxWidth: "20%",
-              width: "2000px",
+              maxWidth: "22%",
+              width: "1500px",
               margin: "5",
               objectFit: "cover",
               position: "relative",
@@ -28,9 +28,9 @@ function CreateUserScreen() {
             autoPlay
             fluid={false}
           />
+            <UserForm></UserForm>
+          </div>
 
-          <UserForm></UserForm>
-        </div>
       </Section>
     </>
   );

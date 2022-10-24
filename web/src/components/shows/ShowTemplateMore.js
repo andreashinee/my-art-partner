@@ -31,11 +31,14 @@ function ShowTemplateMore({
       <div className="mt-3 justify-content-between align-items-baseline">
         <h3 className="m-3 fs-1"> {showOne?.title}</h3>
         <h6 className="m-3 fs-4 fw-lighter"> {showOne?.city}</h6>
-        <h6 className="m-3 fs-4 fw-lighter"> {showOne?.location}</h6>
+        <h6 className="m-3 fs-5 fw-lighter"> Location: {showOne?.location}</h6>
         <h6 className="m-3 fs-5 fw-lighter"> {showOne?.description}</h6>
+        <h6 className="m-3 fs-5 fw-lighter"> Duration: {showOne?.duration} hours</h6>
+        <h6 className="m-3 fs-5 fw-lighter"> Price: {showOne?.price} €</h6>
+        <h6 className="m-3 fs-5 fw-lighter"> Organizer: {showOne?.url} </h6>
         <h6 className="m-3 fs-5 fw-lighter">
           {" "}
-          {moment(showOne?.date).utc().format("DD-MM-YYYY")}
+          Date: {moment(showOne?.date).utc().format("DD-MM-YYYY")}
         </h6>
       </div>
     </div>

@@ -71,13 +71,7 @@ module.exports.update = (req, res, next) => {
 };
 
 module.exports.delete = (req, res, next) => {
-  User.findByIdAndDelate(req.params.id)
-    .then((user) => {
-      if (user) {
-        res.status(204).send();
-      } else {
-        next(createError(404, "Show not found"));
-      }
-    })
-    .catch(next);
+  User.deleteOne({ _id: req.user.id})
+.then(() => res.status(204).send())
+.catch(next);
 };

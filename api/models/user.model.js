@@ -2,6 +2,16 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const categories = require("../data/categories");
 
+const isURL = (value) => {
+  try {
+    new URL(value);
+    return true;
+  } catch (error) {
+    return "Url is not valid";
+  }
+};
+
+
 const userSchema = new Schema(
   {
     name: {
@@ -42,10 +52,15 @@ const userSchema = new Schema(
     },
 
     category: {
-      type: String,
-      required: "The category is required",
-      trim: true,
-      enum: categories.map((category) => category.value),
+      type: [
+        {
+          type: String,
+          required: "Category is required",
+          enum: categories.map((category) => category.value),
+          trim: true,
+        },
+      ],
+      default: [],
     },
 
     band: {
@@ -79,6 +94,11 @@ const userSchema = new Schema(
     picture: {
       type: String,
       trim: true,
+      required: "The url is required",
+      validate: {
+        validator: isURL,
+        message: "Url is not valid",
+      },
     },
 
     likes: {

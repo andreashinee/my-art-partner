@@ -12,6 +12,7 @@ import {
   LoginScreen,
 } from "./screens";
 import SingleShow from "./components/shows/SingleShow";
+import SingleUser from "./components/users/SingleUser"
 
 function AuthGuard({ children }) {
   const { registerUser } = useContext(AuthContext);
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Register" element={<CreateUserScreen />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/shows/:id" element={<SingleShow />} />
+          <Route path="/user/:id" element={<SingleUser />} />
         </Routes>
       </div>
     </>

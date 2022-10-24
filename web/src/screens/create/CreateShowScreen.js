@@ -9,11 +9,11 @@ function CreateShowScreen() {
     <>
       <h2>Add a Show!</h2>
       <br />
-      <Section title="Add a Show" icon="edit">
+      <Section title=" " icon=" ">
         <div className="box-form ">
           <video
             style={{
-              maxWidth: "20%",
+              maxWidth: "23%",
               width: "2000px",
               margin: "5",
               objectFit: "cover",

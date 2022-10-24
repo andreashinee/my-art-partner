@@ -13,7 +13,7 @@ function Users() {
   }, []);
 
   return (
-    <div className=" row row-cols-12 row-cols-sm-6 row-cols-md-5">
+    <div className=" row row-cols-1 row-cols-sm-1 row-cols-md-1">
       {users.map((user) => (
         <div className="col" key={user.id}>
           <UserTemplate {...user} />

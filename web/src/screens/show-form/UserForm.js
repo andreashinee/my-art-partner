@@ -24,20 +24,24 @@ function UserForm() {
     console.log(data);
     setLoading(true);
     userService
-      .createUser(data)
-      .then((user) => navigation("/Users"))
-      .catch((error) => {
-        if (error.response?.data?.errors) {
-          const { errors } = error.response.data;
-          Object.keys(error.response.data.errors).forEach((error) => {
-            setError(error, { type: "custom", message: errors[error].message });
-          });
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
+    .createUser(data)
+    .then((user) => {
+      navigation("/Partners");
+      setLoading(true);
+    })
+    .catch((error) => {
+      if (error.response?.data?.errors) {
+        const { errors } = error.response.data;
+        Object.keys(error.response.data.errors).forEach((error) => {
+          setError(error, { type: "custom", message: errors[error].message });
+        });
+      }
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+};
+
 
   return (
     <>

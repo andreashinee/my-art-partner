@@ -28,7 +28,14 @@ function NavBar() {
         </li>
 
         <li className="nav-item me-auto">
-          <Link className="navbar-brand" to="/login">
+          <Link className="navbar-brand" to="/Partners">
+            {" "}
+            Find a Partner!{" "}
+          </Link>
+        </li>
+
+        <li className="nav-item me-auto">
+          <Link className="navbar-brand" to="/Register">
             {" "}
             Hi User! {user.registerUser.data.name}
           </Link>

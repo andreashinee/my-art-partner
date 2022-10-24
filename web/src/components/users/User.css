@@ -1,0 +1,39 @@
+
+.info {
+  display: flex;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  gap: 10px;
+  gap: 10px 20px;
+  /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+  align-content: center;
+
+}
+
+
+.image {
+  display: flex;
+  size: 200px;
+  align-content: center;
+
+}
+
+.box {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  gap: 10px;
+  gap: 10px 20px;
+  /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+  align-content: center;
+  justify-content: space-evenly;
+  
+
+}
+
