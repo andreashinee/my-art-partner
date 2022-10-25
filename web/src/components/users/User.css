@@ -33,7 +33,11 @@
   column-gap: 20px;
   align-content: center;
   justify-content: space-evenly;
-  
-
+  background: rgba(214, 185, 185, 0.363);
+  padding: 50px;
+  top: 55%;
+  left: 50%;
+  font-family: 'Figtree', sans-serif; 
 }
+
 

@@ -1,41 +1,30 @@
 
-.infoshow {
-  display: flex;
-  margin-bottom: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  gap: 10px;
-  gap: 10px 20px;
-  /* row-gap column gap */
-  row-gap: 10px;
-  column-gap: 20px;
-  align-content: center;
-
-}
-
 .image-show {
   display: flex;
   margin-bottom: 50px;
+  top: 60px;
   margin-left: 50px;
   display: flex;
   size: 200px;
   align-content: center;
 
+
 }
 
 
 .boxshow {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  gap: 10px;
-  gap: 10px 20px;
-  /* row-gap column gap */
-  row-gap: 10px;
-  column-gap: 20px;
-  align-content: center;
-  justify-content: space-evenly;
+  position: absolute;
+  color: white;
+  padding: 50px;
+  z-index: 10;
+  float: left;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Figtree', sans-serif;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.363);
+
   
 
 }

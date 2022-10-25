@@ -22,10 +22,12 @@ function ShowTemplateMore({
 
   return (
     <>
+
       <div className="d-felx show-item flex-column">
 <br></br>
 <br></br>
 <br></br>
+
           <div className="image-show">
             <img
               className="w-100 rounded-1"
@@ -35,8 +37,9 @@ function ShowTemplateMore({
               alt={showOne?.title}
             />
           </div>
+          
           <div className="boxshow">
-          <div className="infoshow">
+      
             <div className="mt-3 justify-content-between align-items-baseline">
               <h3 className="m-3 fs-1"> {showOne?.title}</h3>
               <h6 className="m-3 fs-4 fw-lighter"> {showOne?.city}</h6>
@@ -61,10 +64,10 @@ function ShowTemplateMore({
                 {" "}
                 Date: {moment(showOne?.date).utc().format("DD-MM-YYYY")}
               </h6>
-            </div>
           </div>
         </div>
       </div>
+
     </>
   );
 }

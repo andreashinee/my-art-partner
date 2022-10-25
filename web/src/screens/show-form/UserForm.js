@@ -59,7 +59,7 @@ function UserForm() {
         <form className="form" onSubmit={handleSubmit(handleCreateUserSubmit)}>
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-user fa-fw"></i>
             </span>
             <input
               type="text"
@@ -80,7 +80,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-home fa-fw"></i>
             </span>
             <input
               type="text"
@@ -102,7 +102,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-calendar fa-fw"></i>
             </span>
             <input
               type="text"
@@ -123,7 +123,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-pencil fa-fw"></i>
             </span>
             <textarea
               type="text"
@@ -148,7 +148,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-user fa-fw"></i>
             </span>
             <input
               type="text"
@@ -174,7 +174,7 @@ function UserForm() {
             render={({ field: { onBlur, onChange, value } }) => (
               <div className="input-group mb-1">
                 <span className="input-group-text">
-                  <i className="fa fa-tag fa-fw"></i>
+                  <i className="fa fa-music fa-fw"></i>
                 </span>
                 <Select
                   className="form-control p-0"
@@ -205,7 +205,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-microphone fa-fw"></i>
             </span>
             <input
               type="text"
@@ -224,7 +224,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-music fa-fw"></i>
             </span>
             <input
               type="text"
@@ -242,7 +242,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-book fa-fw"></i>
             </span>
             <input
               type="text"
@@ -260,7 +260,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-pencil fa-fw"></i>
             </span>
             <input
               type="text"
@@ -282,7 +282,7 @@ function UserForm() {
 
           <div className="input-group mb-1">
             <span className="input-group-text">
-              <i className="fa fa-tag fa-fw"></i>
+              <i className="fa fa-user fa-fw"></i>
             </span>
             <input
               type="text"
