@@ -70,7 +70,8 @@ button:active {
   row-gap: 10px;
   column-gap: 20px;
   align-content: center;
-  background: rgba(214, 185, 185, 0.11);
+  background-image: url("../../components/images/cielo.jpg");
+  background-color: #cccccc3d;padding: 50px;
   font-family: 'Figtree', sans-serif;
   
 
