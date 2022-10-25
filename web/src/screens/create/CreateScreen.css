@@ -10,6 +10,7 @@ h2 {
   font-size: 50px;
   flex-wrap: wrap;
   text-overflow: ellipsis;
+  
 }
 
 button {
@@ -53,6 +54,8 @@ button:active {
   row-gap: 10px;
   column-gap: 20px;
   align-content: center;
+  font-family: 'Figtree', sans-serif;
+  
 }
 
 .box-form {
@@ -67,5 +70,8 @@ button:active {
   row-gap: 10px;
   column-gap: 20px;
   align-content: center;
+  background: rgba(214, 185, 185, 0.11);
+  font-family: 'Figtree', sans-serif;
+  
 
 }

@@ -8,6 +8,7 @@ function CreateShowScreen() {
   return (
     <>
       <h2>Add a Show!</h2>
+      
       <br />
       <Section title=" " icon=" ">
         <div className="box-form ">
